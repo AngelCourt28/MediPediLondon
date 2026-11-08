@@ -1,80 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <title>Medi Pedi London</title> -->
-    
-        <link rel="stylesheet" href="style.css">
-    
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
-            rel="stylesheet">
-    </head>
 
-    <body>
-            <!-- Mobile hamburger button -->
-            <button class="menu-toggle" onclick="toggleMenu()">
-                ☰
-            </button>
-            
-            <br>
-            
-            <!-- Sidebar -->
-            <div class="sidebar" id="sidebar">
-            
-                <nav>
-                    <a href="index.html">Home</a>
-                    <!-- <a href="#about">About Us</a> -->
-                    <a href="#services">Services</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-            
-            
-            </div>
-      
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Medi Pedi London</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Hamburger button -->
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+
         <main>
+
             <header>
-                <h1 style="display: block; margin-left: 15%;">Book Your Appointment</h1>
+                <h1>Book Your Appointment</h1>
             </header>
-            <!-- <header>
-                <img src="medipedi logo.png" alt="Medi Pedi London" style="width: 30%; ">
-            </header> -->
-            <section>
-            
-                <br>
-                <label style="text-align: right; display: block; padding-right: 20%;">Don't wait for your experience. Book your personalised treatment now</label>
 
-                <br>
-                
-                <a href="tel:+447904517522" id="bookButton" >Call Us</a>
+            <section class="contact-section">
 
-                <br>
-                <br>
-                
-                <!-- <div style="padding-left:25%; display: block;">
-                    <label>Phone:</label>
-                    <a href="tel:+447904517522">+44 7904 517522</a>
-                
-                </div>
-               
-                <label style="text-align: right; display: block; padding-right: 20%;">Address:</label>
-                <div style="text-align: right; display: block; padding-right: 20%;">
-                    <a href="https://maps.app.goo.gl/Dsnj7dqoyo1nyssT6">
-                        15 Currey Road,<br>
-                        Greenford.<br>
-                        UB6 0BD
-                    </a>
-                </div> -->
-            <div class="map-container" style="width: 100%; margin: 0 auto; text-align: center;">
-                    <iframe src="https://www.google.com/maps?q=15+Currey+Rd,+Greenford+UB6+0BD&output=embed" width="50%" height="350"
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <p class="contact-intro">
+                    Don't wait for your experience. Book your personalised treatment now.
+                </p>
+
+                <a href="tel:+447904517522" id="bookButton">Call Us</a>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps?q=15+Currey+Rd,+Greenford+UB6+0BD&output=embed"
+                        width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-            </section>     
-            
+
+            </section>
+
         </main>
-    </body>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById("sidebar");
+            const button = document.querySelector(".menu-toggle");
+
+            sidebar.classList.toggle("open");
+
+            button.setAttribute(
+                "aria-expanded",
+                sidebar.classList.contains("open")
+            );
+        }
+    </script>
+
+</body>
 
 </html>

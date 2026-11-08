@@ -1,10 +1,12 @@
 /* GENERAL */
+
 body {
     margin: 0;
     min-height: 100vh;
 }
 
 /* SIDEBAR */
+
 .sidebar {
     height: 100vh;
     width: 240px;
@@ -31,28 +33,8 @@ body {
     border-radius: 5px;
 }
 
-/* BOOKING BUTTON */
-#bookButton {
-    background-color: #8B6F70;
-    color: white;
-    border: none;
-    padding: 14px 32px;
-    border-radius: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    display: block;
-    /* text-align: center; */
-    margin-left: 50%;
-    width: 75px;
-}
-
 /* MAIN CONTENT */
+
 .main-content {
     margin-left: 240px;
     padding: 30px;
@@ -70,19 +52,108 @@ main {
     font-size: 20px;
 }
 
+/* HAMBURGER BUTTON */
+
+.menu-toggle {
+    display: none;
+}
+
+/* CONTACT PAGE */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-intro {
+    margin: 35px auto;
+}
+
+#bookButton {
+    background-color: #8B6F70;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px auto 35px;
+}
+
+#bookButton:hover {
+    background-color: #75595A;
+}
+
+.map-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    display: block;
+}
+
 /* FOOTER */
+
 footer {
     background-color: #FAF8F2;
     padding: 30px;
 }
 
-/* HAMBURGER BUTTON */
-.menu-toggle {
-    display: none;
+/* IMAGE */
+
+.hero {
+    position: relative;
+    width: 100%;
 }
 
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, #ffffff 30%, transparent 100%);
+    pointer-events: none;
+}
+
+/* QUOTE */
+
+.quote-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.quote {
+    flex: 1;
+    text-align: center;
+    font-family: 'Beau Rivage', serif;
+    font-size: 25px;
+}
+
+.quote-section img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
 
 /* MOBILE DESIGN */
+
 @media screen and (max-width: 768px) {
 
     .sidebar {
@@ -119,48 +190,17 @@ footer {
     main {
         padding: 15px;
     }
-}
 
+    .quote-section {
+        flex-direction: column;
+        padding: 15px;
+    }
 
+    .quote-section img {
+        width: 100%;
+    }
 
-.hero {
-    position: relative;
-    width: 100%;
-}
-
-.hero img {
-    width: 100%;
-    display: block;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background: linear-gradient(to bottom, #ffffff 30%, transparent 100%);
-    pointer-events: none;
-}
-
-.quote-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 40px;
-}
-
-.quote {
-    flex: 1;
-    text-align: center;
-    font-family: 'Beau Rivage', serif;
-    font-size: 25px;
-}
-
-.quote-section img {
-    width: 40%;
-    height: auto;
-    object-fit: cover;
+    .map-container {
+        width: 100%;
+    }
 }
