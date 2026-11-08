@@ -33,15 +33,23 @@ body {
 
 /* BOOKING BUTTON */
 #bookButton {
-    background-color: white;
-    color: #8f1f78;
-    padding: 13px 22px;
-    border-radius: 30px;
-    text-decoration: none;
+    background-color: #8B6F70;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    display: inline-block;
-    margin-top: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    display: block;
+    /* text-align: center; */
+    margin-left: 50%;
+    width: 75px;
 }
 
 /* MAIN CONTENT */
@@ -111,4 +119,48 @@ footer {
     main {
         padding: 15px;
     }
+}
+
+
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, #ffffff 30%, transparent 100%);
+    pointer-events: none;
+}
+
+.quote-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.quote {
+    flex: 1;
+    text-align: center;
+    font-family: 'Beau Rivage', serif;
+    font-size: 25px;
+}
+
+.quote-section img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
 }
